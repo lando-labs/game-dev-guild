@@ -1,0 +1,133 @@
+# CAMI Agent Strategies - Game Development Guild
+#
+# This file defines the tech stack and behavioral strategies for 2D game development agents.
+# agent-architect reads these strategies when creating new agents for this guild.
+#
+# Focus: Phaser 3 2D game development with MCP integration
+# Game Types: Platformers, Puzzle/Casual, RPG/Adventure
+
+# ==============================================================================
+# Tech Stack
+# ==============================================================================
+
+tech_stack:
+  technologies:
+    # Game Engine (Primary)
+    - Phaser 3.80+
+    - TypeScript 5+
+
+    # Web Platform
+    - Vite 5+
+    - HTML5 Canvas/WebGL
+
+    # State Management
+    - Phaser Scene Manager
+    - Custom EventEmitter patterns
+
+    # Asset Pipeline
+    - Tiled Map Editor (TMX/JSON)
+    - TexturePacker (sprite sheets)
+    - Aseprite (pixel art, optional)
+
+    # Audio
+    - Web Audio API
+    - Howler.js (fallback)
+
+    # Physics
+    - Phaser Arcade Physics
+    - Matter.js (complex physics)
+
+    # Testing
+    - Vitest
+    - Playwright (visual regression)
+
+    # Build & Deploy
+    - Vite
+    - GitHub Actions
+    - itch.io / web deployment
+
+  strategy: |
+    **Discovery Protocol**:
+    Agents should DISCOVER actual game configuration by examining:
+    - package.json for Phaser version and dependencies
+    - Game config files (game.ts, config.ts)
+    - Scene structure and existing patterns
+    - Asset manifest and loading patterns
+
+    **Phaser-Specific Guidance**:
+    - Use Phaser 3 Scene lifecycle (preload, create, update)
+    - Prefer Arcade Physics for simple games, Matter.js for complex
+    - Use Phaser's built-in asset loader with proper key management
+    - Leverage Phaser's tween system for animations
+    - Use Scene events for inter-scene communication
+
+    **Game Architecture Patterns**:
+    - Entity-Component patterns for game objects
+    - State machines for character/enemy behavior
+    - Object pooling for bullets, particles, collectibles
+    - Separation of game logic from rendering
+
+    **MCP Integration Focus**:
+    This guild is building toward a Phaser MCP server. Agents should:
+    - Document Phaser APIs thoroughly for MCP tool design
+    - Identify common patterns that could become MCP tools
+    - Consider scene management, asset loading, physics as tool domains
+
+# ==============================================================================
+# Game Development Patterns
+# ==============================================================================
+
+game_patterns:
+  platformer:
+    - Tile-based level design with Tiled
+    - Physics-based character controller
+    - Camera following with deadzone
+    - Parallax backgrounds
+    - Collectibles and scoring system
+
+  puzzle_casual:
+    - Grid-based game logic
+    - Match detection algorithms
+    - Tweened piece movement
+    - Combo and chain systems
+    - Save/load game state
+
+  rpg_adventure:
+    - Dialogue system with choices
+    - Inventory management
+    - Quest/objective tracking
+    - NPC interaction zones
+    - Save system with multiple slots
+
+# ==============================================================================
+# Documentation Strategy
+# ==============================================================================
+
+documentation:
+  location: "<project-root>/docs/game-design/"
+
+  # Game-specific documentation types:
+  # - GDD (Game Design Document) sections
+  # - Technical design docs for systems
+  # - Asset specifications
+  # - Level design guidelines
+
+# ==============================================================================
+# MCP Development Notes
+# ==============================================================================
+
+mcp_goals:
+  description: |
+    The end goal is to create a Phaser MCP server that provides tools for:
+    - Scene scaffolding and management
+    - Sprite and animation setup
+    - Physics configuration
+    - Tilemap integration
+    - Common game patterns (player controller, enemy AI, etc.)
+
+  potential_tools:
+    - phaser_create_scene: Scaffold a new Phaser scene
+    - phaser_add_sprite: Add and configure a sprite with physics
+    - phaser_setup_tilemap: Configure tilemap from Tiled export
+    - phaser_player_controller: Generate platformer/top-down controller
+    - phaser_add_ui: Create UI elements (health bar, score, etc.)
