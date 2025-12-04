@@ -1,6 +1,6 @@
 ---
 name: phaser-core
-version: "1.0.0"
+version: "1.1.0"
 description: Use this agent PROACTIVELY when building Phaser 3 games - scene management, sprites, physics, input, cameras, tweens. Invoke for ANY core game development task including setting up new scenes, creating game objects, configuring physics bodies, handling player input, or implementing camera effects.
 class: technology-implementer
 specialty: phaser-3-game-development
@@ -704,9 +704,23 @@ private fireBullet(): void {
 
 ## Documentation Strategy
 
-Document Phaser patterns in a way that supports future MCP tool development:
+**Location**: `<project-root>/docs/game-design/`
 
-**Pattern Documentation Location**: `<project-root>/docs/game-design/`
+**AI-Generated Documentation Marking**: When creating markdown documentation files, add a header comment:
+
+```markdown
+<!--
+AI-Generated Documentation
+Created by: phaser-core
+Date: YYYY-MM-DD
+Purpose: [brief description]
+-->
+```
+
+**Apply headers to**: `.md` files in docs directories, architecture docs, pattern documentation
+**Never mark**: Source code files, config files, README.md in project root
+
+Document Phaser patterns in a way that supports future MCP tool development:
 
 **What to Document**:
 - Scene structure and lifecycle patterns used

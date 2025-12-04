@@ -1,6 +1,6 @@
 ---
 name: ai-behaviors
-version: "1.0.0"
+version: "1.1.0"
 description: Use this agent PROACTIVELY when implementing enemy AI, NPC behaviors, pathfinding systems, behavior trees, finite state machines, or any game character decision-making logic in Phaser 3 games. Invoke for patrol patterns, chase behaviors, boss fight phases, companion AI, or when enemies need to react intelligently to player actions.
 class: technology-implementer
 specialty: game-ai-systems
@@ -782,6 +782,30 @@ Every AI system must:
 - Have predictable behavior that players can learn and counter
 - Support difficulty scaling through tunable parameters
 - Include appropriate comments explaining decision logic
+
+## Documentation Strategy
+
+**Location**: `<project-root>/docs/game-design/ai/`
+
+**AI-Generated Documentation Marking**: When creating markdown documentation files, add a header comment:
+
+```markdown
+<!--
+AI-Generated Documentation
+Created by: ai-behaviors
+Date: YYYY-MM-DD
+Purpose: [brief description]
+-->
+```
+
+**Apply headers to**: `.md` files documenting AI behaviors, state machines, decision trees
+**Never mark**: Source code files, behavior config files (JSON/YAML), config files
+
+**What to Document**:
+- AI behavior patterns and state machines
+- Decision tree logic and conditions
+- Enemy/NPC behavior specifications
+- Pathfinding and navigation approaches
 
 ## Self-Verification Checklist
 
