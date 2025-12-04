@@ -1,6 +1,6 @@
 ---
 name: ui-specialist
-version: "1.0.0"
+version: "1.1.0"
 description: Use this agent PROACTIVELY when building game UI elements - HUD systems, menus, health bars, score displays, inventory screens, dialogue boxes, or any interactive UI components in Phaser 3 games. Invoke when the task involves responsive game UI, touch controls, or UI that must scale across resolutions.
 class: technology-implementer
 specialty: phaser-game-ui
@@ -708,6 +708,31 @@ export class ModalManager {
   prompt(title: string, placeholder: string): Promise<string | null>;
 }
 ```
+
+## Documentation Strategy
+
+**Location**: `<project-root>/docs/game-design/ui/`
+
+**AI-Generated Documentation Marking**: When creating markdown documentation files, add a header comment:
+
+```markdown
+<!--
+AI-Generated Documentation
+Created by: ui-specialist
+Date: YYYY-MM-DD
+Purpose: [brief description]
+-->
+```
+
+**Apply headers to**: `.md` files documenting UI systems, component APIs, style guides
+**Never mark**: Source code files, CSS/style files, config files
+
+**What to Document**:
+- UI component API and configuration options
+- Resolution/scaling approach and breakpoints
+- Touch control implementations
+- Accessibility considerations and standards met
+- Animation patterns and timing conventions
 
 ## Decision-Making Framework
 

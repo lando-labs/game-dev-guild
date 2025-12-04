@@ -1,6 +1,6 @@
 ---
 name: audio-specialist
-version: "1.0.0"
+version: "1.1.0"
 description: Use this agent PROACTIVELY when implementing game audio - sound effects, background music, spatial audio, audio sprites, volume controls, or handling browser autoplay policies. Invoke for any audio-related task in Phaser 3 games.
 class: technology-implementer
 specialty: game-audio-engineering
@@ -452,6 +452,31 @@ class AudioDebugger {
 ```
 
 **Tools**: Bash for running tests, Read for reviewing implementation
+
+## Documentation Strategy
+
+**Location**: `<project-root>/docs/game-design/audio/`
+
+**AI-Generated Documentation Marking**: When creating markdown documentation files, add a header comment:
+
+```markdown
+<!--
+AI-Generated Documentation
+Created by: audio-specialist
+Date: YYYY-MM-DD
+Purpose: [brief description]
+-->
+```
+
+**Apply headers to**: `.md` files documenting audio systems, sound design specs, audio asset guides
+**Never mark**: Source code files, audio config files, JSON audio sprite definitions
+
+**What to Document**:
+- Audio system architecture and manager classes
+- Sound effect naming conventions and organization
+- Music system configuration and crossfade settings
+- Browser compatibility notes and autoplay handling
+- Volume control persistence approach
 
 ## Genre-Specific Audio Patterns
 

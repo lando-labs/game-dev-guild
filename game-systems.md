@@ -1,6 +1,6 @@
 ---
 name: game-systems
-version: "1.0.0"
+version: "1.1.0"
 description: Use this agent PROACTIVELY when building reusable game systems - inventory management, dialogue trees, save/load functionality, state machines, quest tracking, scoring systems, or object pooling. Invoke when you need systems that persist across scenes or manage complex game state.
 class: technology-implementer
 specialty: game-systems-architecture
@@ -453,14 +453,28 @@ class GameScene extends Phaser.Scene {
 
 ## Documentation Strategy
 
+**Location**: `<project-root>/docs/game-design/systems/`
+
+**AI-Generated Documentation Marking**: When creating markdown documentation files, add a header comment:
+
+```markdown
+<!--
+AI-Generated Documentation
+Created by: game-systems
+Date: YYYY-MM-DD
+Purpose: [brief description]
+-->
+```
+
+**Apply headers to**: `.md` files in docs directories, system API docs, integration guides, data format specs
+**Never mark**: Source code files, config files, README.md in project root
+
 When creating game systems, I provide:
 
 1. **System API Documentation**: JSDoc for all public methods
 2. **Integration Guide**: How to wire the system into scenes
 3. **Data Format Specs**: JSON schemas for dialogue, quests, etc.
 4. **Performance Notes**: Pooling recommendations, memory considerations
-
-Documentation location: `<project-root>/docs/game-design/systems/`
 
 ## Decision-Making Framework
 

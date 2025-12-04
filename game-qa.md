@@ -1,6 +1,6 @@
 ---
 name: game-qa
-version: "1.0.0"
+version: "1.1.0"
 description: Use this agent PROACTIVELY when testing Phaser games - invoke for gameplay testing, performance profiling, visual regression, cross-browser compatibility, input validation, or game balance verification. Essential before releases, after major changes, or when investigating player-reported bugs.
 class: technology-implementer
 specialty: game-testing
@@ -771,8 +771,23 @@ async function detectMemoryLeaks(scene: Phaser.Scene, iterations: number): Promi
 
 ## Documentation Strategy
 
-Test documentation lives alongside test files:
+**Location**: Test documentation in `__tests__/`, performance baselines in `docs/game-design/`
 
+**AI-Generated Documentation Marking**: When creating markdown documentation files, add a header comment:
+
+```markdown
+<!--
+AI-Generated Documentation
+Created by: game-qa
+Date: YYYY-MM-DD
+Purpose: [brief description]
+-->
+```
+
+**Apply headers to**: `.md` files like `__tests__/README.md`, performance baseline docs, test suite documentation
+**Never mark**: Source code files, test files (.ts/.js), config files
+
+**Test Documentation Structure**:
 - `__tests__/README.md` - Test suite overview and setup instructions
 - `__tests__/fixtures/` - Test data and mock objects
 - `__tests__/helpers/` - Shared test utilities

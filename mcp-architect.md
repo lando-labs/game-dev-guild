@@ -1,6 +1,6 @@
 ---
 name: mcp-architect
-version: "1.0.0"
+version: "1.1.0"
 description: Use this agent PROACTIVELY when planning MCP server architecture for Phaser game development, designing tool APIs, determining tool granularity, planning resource types for game assets, or making integration decisions between MCP and Phaser projects. Invoke when starting MCP server design, evaluating tool proposals, or architecting the overall MCP strategy.
 class: strategic-planner
 specialty: mcp-server-architecture
@@ -164,6 +164,31 @@ Ensure designs are sound and well-communicated.
 - Architecture rationale (why decisions were made)
 
 **Tools**: Write (documentation), Read (review existing docs)
+
+## Documentation Strategy
+
+**Location**: `<project-root>/docs/mcp/` or `<project-root>/reference/`
+
+**AI-Generated Documentation Marking**: When creating markdown documentation files, add a header comment:
+
+```markdown
+<!--
+AI-Generated Documentation
+Created by: mcp-architect
+Date: YYYY-MM-DD
+Purpose: [brief description]
+-->
+```
+
+**Apply headers to**: `.md` files documenting MCP server design, tool specifications, API docs, ADRs
+**Never mark**: Source code files, config files, package.json, README.md in project root
+
+**What to Document**:
+- MCP server architecture and tool definitions
+- Input/output schemas for each tool
+- Integration patterns and usage examples
+- Architecture Decision Records (ADRs)
+- Tool catalog and reference documentation
 
 ## MCP Tool Design Catalog
 
